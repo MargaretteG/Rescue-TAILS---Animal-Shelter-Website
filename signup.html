@@ -154,22 +154,59 @@
     </div>
 
     <!-- Terms and Conditions Modal -->
-    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-sign modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Use modal-lg for fixed width -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>Here are the terms and conditions...</p>
+                <div class="modal-body overflow-auto" style="max-height: 400px;"> <!-- Fixed height with scrollable content -->
+                    <ol class="terms-cond">
+                        <li><b>General Terms</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> 1.1. Rescue Tails is a platform dedicated to facilitating the adoption of animals in need. By signing up, you acknowledge that you are joining our community with the goal of supporting responsible pet adoption and care. 1.2. Your account is personal and non-transferable. You agree to provide accurate, complete, and current information during the sign-up process. 1.3. We reserve the right to modify or discontinue any part of the platform without prior notice, at our sole discretion.</li>
+                        </ul>
+                    </li>
+                        <li><b>Eligibility</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> 2.1. You must be 18 years or older to create an account and use this platform for adoption or other services. 2.2. If you are under 18, you may only use our services with the supervision of a legal guardian. 2.3. By signing up, you confirm that you have the legal capacity to enter into this agreement.</li>
+                        </ul>
+                        </li>
+                        <li><b>Privacy and Data Usage</b>
+                            <ul>
+                                <li><i class="fa-solid fa-paw bullet"></i> 3.1. We are committed to safeguarding your privacy. The information you provide during sign-up will be used in accordance with our [Privacy Policy]. We will not sell or distribute your personal information to third parties without your consent. 3.2. You agree that Rescue Tails may send you promotional and transactional emails relevant to the platform and your activity.</li>
+                            </ul>
+                            </li>
+                            <li><b>User Conduct</b>
+                                <ul>
+                                    <li><i class="fa-solid fa-paw bullet"></i> 4.1. As a user, you agree to use this platform in a respectful and responsible manner. Any misuse, fraudulent activity, or abuse of the platform will result in the termination of your account. 4.2. You must not post or distribute any inappropriate content, including but not limited to harassment, hate speech, or any content that could harm animals or users of the platform.</li>
+                                </ul>
+                                </li>
+                                <li><b>Adoption Process</b>
+                                    <ul>
+                                        <li><i class="fa-solid fa-paw bullet"></i> 5.1. By using our platform, you acknowledge that the adoption process involves thorough vetting, including, but not limited to, interviews, home visits, and the payment of adoption fees, where applicable. 5.2. Rescue Tails reserves the right to deny adoption requests if the criteria for responsible pet ownership are not met.</li>
+                                    </ul>
+                                    </li>
+                                    <li><b>Fees & Donations</b>
+                                        <ul>
+                                            <li><i class="fa-solid fa-paw bullet"></i> 6.1. Adoption fees and donations contribute to the ongoing care and welfare of animals in our shelter. All fees are non-refundable unless specifically stated otherwise. 6.2. Payments made through Rescue Tails, including adoption fees and donations, are processed securely, and you will receive a confirmation of payment.</li>
+                                        </ul>
+                                        </li>
+                                        <li><b>Changes of Terms</b>
+                                            <ul>
+                                                <li><i class="fa-solid fa-paw bullet"></i> 7.1. We reserve the right to amend these Terms and Conditions at any time. Changes will be communicated to you through our platform, and continued use of your account will signify your acceptance of the modified terms.</li>
+                                            </ul>
+                                            </li>
+                    </ol>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- Success Sign Up Modal -->
     <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -182,7 +219,7 @@
                     <p>Thank you for signing up! You can now sign in to your account.</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="signin.html" class="btn btn-primary">Go to Sign In</a>
+                    <a href="signin.html" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3">Go to Sign In</a>
                 </div>
             </div>
         </div>
