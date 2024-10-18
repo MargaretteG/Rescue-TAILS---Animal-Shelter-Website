@@ -8,7 +8,17 @@ body {
 .overflow-hidden{
     overflow: hidden;
 }
-
+ul li{
+    list-style-type: none;
+}
+.modal-content{
+    border: #6256ca 2px solid;
+    
+}
+.modal-title{
+    color: #6256ca;
+    font-weight:bold;
+}
 .navbar-brand, .navbar img {
     display: flex; 
     align-items: center;
@@ -23,7 +33,7 @@ body {
 
 /* HEADER FOR EVERY PAGE */
 .cardHeader {
-    background-image: url('images/meet-the-pets-header.jpg') !important; 
+    background-image: url('../images/meet-the-pets-header.jpg') !important; 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -125,8 +135,8 @@ body {
 
 .btnAnimals:hover {
     background-color: white;
-    color: #00712d; /* Optional: You can change text color to match the background */
-    transform: translateY(-10px); /* Add a slight upward movement */
+    color: #00712d; 
+    transform: translateY(-10px); 
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -164,27 +174,27 @@ body {
     top: -40px;
     z-index: -2;
 }
-/* Default large size for bigger screens */
+
 .title-heading {
-    font-size: 6rem; /* Adjust this as your base size for larger screens */
+    font-size: 6rem; 
     color: #f9622a;
     white-space: nowrap;
 }
-/* Subheading adjustments for responsiveness */
+
 .subheading {
     margin-top: -10px;
-    font-size: 25px; /* Base size for larger screens */
+    font-size: 25px; 
     color: #f9622a;
 }
-/* Media queries for responsiveness */
+
 @media (max-width: 1200px) {
     .title-heading {
-        font-size: 5rem; /* Adjust based on screen size */
+        font-size: 5rem;
     }
 }
 @media (max-width: 1024px) {
     .cat, .dog {
-        width: 600px; /* Reduce size on smaller screens */
+        width: 600px; 
     }
     .cat {
         right: 100px;
@@ -199,7 +209,7 @@ body {
 
 @media (max-width: 768px) {
     .cat, .dog {
-        width: 400px; /* Further reduce size for tablet screens */
+        width: 400px;
     }
     .cat {
         right: 50px;
@@ -210,7 +220,7 @@ body {
         top: -10px;
     }
     .title-heading {
-        font-size: 4rem; /* Adjust based on screen size */
+        font-size: 4rem; 
     }
     .subheading {
         font-size: 20px;
@@ -239,8 +249,8 @@ body {
         display: none;
     }
     .cat, .dog {
-        /* display: none; */
-        width: 250px; /* Smallest size for mobile screens */
+       
+        width: 250px; 
     }
     .cat {
         left: -90px;
@@ -267,11 +277,11 @@ body {
     
   }
   .cardDonate{
-    background: url('images/pet-adoption.jpg') no-repeat center;
+    background: url('../images/pet-adoption.jpg') no-repeat center;
     background-size: cover; 
   }
   .cardAdopt{
-    background: url('images/pet-adoption2.jpg') no-repeat center;
+    background: url('../images/pet-adoption2.jpg') no-repeat center;
     background-size: cover; 
     
   }
