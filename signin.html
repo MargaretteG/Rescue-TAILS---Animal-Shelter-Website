@@ -98,62 +98,74 @@
                                     You must agree before submitting.
                                 </div>
                             </div>
-                            <a class="d-none d-md-block col-md-6 col-sm-4 col text-end" href="#">Forgot Password</a>
+                            <a class="d-none d-md-block col-md-6 col-sm-4 col text-end" href="#" data-bs-toggle="modal" data-bs-target="#forgotPassModal">Forgot Password</a>
                         </div>
 
                         <div class="d-flex flex-column align-items-center">
                             <button class="btn btnCustom btn-dark btn-lg py-md-2 px-5" type="button" onclick="signInPass()">Sign in</button>
-                            <a class="d-block d-md-none mt-2 text-end" href="#">Forgot Password</a>
+                            <a class="d-block d-md-none mt-2 text-end" href="#" data-bs-toggle="modal" data-bs-target="#forgotPassModal">Forgot Password</a>
                         </div>
                         
 
                         <hr class="my-4" style="width: 100%; border-color: #000;">
-                        <small class="text-body-secondary text-center">By clicking Sign up, you agree to the terms of use.</small>
+                        <small class=" text-body-secondary text-center">By clicking Sign up, you agree to the terms of use.</small>
                     </form>
                 </div>
             </div>
 
         </div>
     </div>
+<!-- FORGOT PASSWORD MODAL -->
+<div class="modal-sign modal fade" id="forgotPassModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 600px;"> <!-- Custom width with max-width -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Forgot Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-auto" style="max-height: 400px;"> 
+                <h6 class="fs-6 fw-light">Please enter the email address associated with your account, and we will send you a link to reset your password.</h6>
+                <div class="form-floating mb-3 w-100 mt-3 mt-md-0">
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                    <label for="floatingInput" class="form-label">Email address</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3" data-bs-dismiss="modal">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
     <script>
         function signInPass() {
             var form = document.getElementById("SignInForm");
 
-            // Check if the form is valid
+           
             if (form.checkValidity()) {
                 var email = document.getElementById("email").value;
                 var pass = document.getElementById("password").value;
                 var check = document.getElementById("remember").checked;
 
-                // Perform custom login check
+                
                 if (email === "user@gmail.com" && pass === "user123" || check === true) {
                     window.location.href = 'landingPage.html';
                 } else {
                     alert("Email or password is incorrect or 'Remember me' is not checked!");
                 }
             } else {
-                form.classList.add('was-validated'); // Add Bootstrap validation feedback
+                form.classList.add('was-validated'); 
             }
         }
 
 
-        // var SignInPass = function() {
-        //     var email = document.getElementById("email").value;
-        //     var pass = document.getElementById("password").value;
-        //     if (email === "user@gmail.com" && pass === "user123") {
-        //         window.location.href = ('landingPage.html');
-        //     } else {
-        //         alert("Email or password is incorrect.");
-        //     }
-        // };
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
         (() => {
             'use strict'
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
             const forms = document.querySelectorAll('.needs-validation')
 
-            // Loop over them and prevent submission
             Array.from(forms).forEach(form => {
                 form.addEventListener('submit', event => {
                     if (!form.checkValidity()) {
