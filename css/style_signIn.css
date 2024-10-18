@@ -2,11 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(../images/signinBg1.jpg); /* Background image */
-    background-size: cover; /* Make sure the image covers the entire area */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Full height */
-    position: relative; /* Required for ::before to work */
+    height: 100vh; 
+    position: relative; 
     overflow-x: hidden;
 }
 
@@ -50,6 +50,17 @@ body::before {
     display: flex; /* Flexbox layout */
     flex-direction: column; /* Align items in a row */
     align-items: center; 
+}
+.modal-content{
+    border: #6256ca 2px solid;
+    
+}
+.modal-title{
+    color: #6256ca;
+    font-weight:bold;
+}
+.modal-body ul li{
+    list-style-type: none;
 }
 @media (max-width: 576px){
     #sign-img{
