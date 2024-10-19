@@ -8,7 +8,7 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
 1. **Sign In**: Sign in to our site using the static data I provided.
    - Username: user@gmail.com
    - Password: user123
-3. **Browse Pets**: Navigate to the "Adopt" page to view available pets.
+3. **Browse Pets**: Navigate to the "Our Pets" page to view available pets.
 4. **Adoption Process**: Follow our 3-step adoption process:
    - Visit the shelter.
    - Meet your future pet.
