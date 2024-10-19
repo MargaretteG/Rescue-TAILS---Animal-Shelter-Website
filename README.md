@@ -15,7 +15,7 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
    - Take your new pet home.
 5. **Donate**: Support us by making a donation through the "Donate" page.
 
-## Some Screenshots of Rescue TAILS Website
+## Some Screenshots of Rescue TAILS Website (navigate through the website to experience full full functions)
 
 ![Welcoming Page Screenshot](screenshots/welcoming.png)
 *The Welcoming Page of Rescue Tails.*
@@ -28,6 +28,9 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
 
 ![Landing Page Screenshot](screenshots/landingPage.png)
 *The Landing Page of Rescue Tails.*
+
+![Footer Screenshot](screenshots/footer.png)
+*The Footer of Rescue Tails.*
 
 
 
