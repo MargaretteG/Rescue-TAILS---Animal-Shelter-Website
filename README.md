@@ -1,4 +1,5 @@
 # RESCUE TAILS: Taking Animals Into Loved & Sheltered - Animal Shelter Website
+# by Marissa Margarette Garcia
 As part of our Midterm Examination for Web Systems and Technologies, this Front-end Web Application is responsive on all devices, every buttons and links are working, including footer's quick links, has a sign in and sign up page, and also a landing page.
 
 Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homeless pets with loving families. This website allows users to browse available pets, learn about the adoption process, and make donations to support our cause.
@@ -18,6 +19,15 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
 
 ![Welcoming Page Screenshot](screenshots/welcoming.png)
 *The Welcoming Page of Rescue Tails.*
+
+![Sign Up Screenshot](screenshots/signup.png)
+*The Sign Up Page of Rescue Tails.*
+
+![Sign In Page Screenshot](screenshots/signin.png)
+*The Sign In Page of Rescue Tails.*
+
+![Landing Page Screenshot](screenshots/landingPage.png)
+*The Landing Page of Rescue Tails.*
 
 
 
