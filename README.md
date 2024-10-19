@@ -16,6 +16,9 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
 
 ## Some Screenshots of Rescue TAILS Website
 
+![Welcoming Page Screenshot](screenshots/Rescue_TAILS-1_welcoming_page.png)
+*The Welcoming Page of Rescue Tails.*
+
 
 
 
