@@ -17,7 +17,8 @@ Welcome to **RESCUE TAILS**, an animal shelter website that helps connect homele
 
 ## Some Screenshots of Rescue TAILS Website
 Navigate through the website to experience it fully
-margaretteg.github.io/Rescue-TAILS---Animal-Shelter-Website/
+
+[margaretteg.github.io/Rescue-TAILS---Animal-Shelter-Website/](https://margaretteg.github.io/Rescue-TAILS---Animal-Shelter-Website/)
 
 ![Welcoming Page Screenshot](screenshots/welcoming.png)
 *The Welcoming Page of Rescue Tails.*
