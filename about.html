@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
+        body{
+            overflow-x: hidden;
+        }
             /* NAVBAR DROPDOWN */
 .dropdown-menu {
     border: #908ac7 1px solid;
@@ -24,9 +27,7 @@
     .dropdown-item:active, .dropdown-item.active {
     background-color: #6256ca; 
     color: white; 
-    }
-    
-            
+    }        
             .img-overlay {
                 position: absolute;
                 top: 0;
@@ -41,19 +42,58 @@
                 z-index: 0; /* Place the image below the overlay */
             }
             .navbar-collapse {
-    background-color: #fffbe6;
+            background-color: #fffbe6;
+            }
+            .img-divider{
+                width: auto;
+                height: 20vh;
+
+            }
+    
+
+
+@media (max-width: 768px){
+   .cardHeader{
+    height: 200px;
+   }
+   .img-divider{
+                width: auto;
+                height: 15vh;
+
+            }
+
+}
+@media (max-width: 576px) {
+     #img-content{
+        width: 100% !important;
+        height: auto !important;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .content p{
+        font-size: medium;
+    }
+    .content-purpose p{
+        font-size: medium;
+    }
+    .img-divider{
+                width: auto;
+                height: 10vh;
+
+            }
 }
 
 
 
     </style>
-</head>
+</head> 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg mx-4 align-items-center"  style="z-index: 3;">
+    <nav class="navbar navbar-expand-lg mx-4 align-items-center" style="z-index: 3;">
         <div class="container-fluid">
             <div class="d-flex align-items-center">
-                <a class="brand navbar-brand" href="landingPage.html">RESCUE<br>TAILS</a>
+                <a class="brand navbar-brand d-none d-md-block" href="landingPage.html">RESCUE<br>TAILS</a>
                 <a href="landingPage.html">
                     <img class="mb-4" src="images/logo.png" alt="Rescue tails" width="80" height="auto" style="margin-left: -30px;">
                 </a>
@@ -64,7 +104,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="ourAnimals.html">OUR PETS</a>
+                        <a class="nav-link " href="ourAnimals.html">OUR PETS</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link nav-link-active" href="about.html">ABOUT US</a>
@@ -77,35 +117,55 @@
                             <li><a class="dropdown-item" href="more-section/adopt.html">Adopt A Pet</a></li>
                             <li><a class="dropdown-item" href="more-section/donate.html">Donate to Pets</a></li>
                         </ul>
-                    </li>
+                    </li> 
                 </ul>
-                <a href="index.html" class="signupbtn btnCustom btn btn-dark ms-auto d-lg-none">Log Out</a>
-                <a href="index.html" class="signupbtn btnCustom btn btn-dark ms-auto d-none d-lg-block">Log Out</a>
+                <a href="index.html" data-bs-toggle="modal" data-bs-target="#logoutModal" class="signupbtn btnCustom btn btn-dark ms-auto d-lg-none">Log Out</a>
+                <a href="index.html" data-bs-toggle="modal" data-bs-target="#logoutModal" class="signupbtn btnCustom btn btn-dark ms-auto d-none d-lg-block">Log Out</a>
                 
             </div>
         </div>
     </nav>
 
+    <!-- LOG OUT MODAL -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirm Log Out</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="fw-light">Are you sure you want to log out?</h6>
+            </div>
+            <div class="modal-footer">
+                <a href="index.html" class=" btnCustom btn btn-dark">Log Out</a>
+                <button type="button" class=" donatebtn btnCustom btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- HEADER -->
         <div class=" row d-flex ">
-            <div class="col-lg-12">
+            <div class=" col-lg-12">
                 <div class="card cardHeader">
                     <div class="card-body d-flex flex-row">
-                        <h1 class="display-3 fw-bold align-self-end px-3" style="bottom: 0px; color: white;">ABOUT US</h1>
+                        <h1 class="display-2 fw-bold  align-self-end align-self-md-center px-3" style="bottom: 0px; color: white;">ABOUT US</h1>
                     </div>
                 </div>
             </div>
         </div>
          <!-- CONTENT OF OUR ABOUT PAGE -->
 
-         <div class="container-fluid mb-5 p-4 d-flex justify-content-center align-items-center border-2  border-bottom" style="background-color: #fffdf6;">
-            <div class="row mb-4 d-flex px-5 py-4 fw-light fs-5 fs-xsm-6">
+         <div class="container-fluid mb-4 mb-md-0 p-0 p-md-4 d-flex justify-content-center align-items-center border-2  border-bottom" style="background-color: #fffdf6;">
+            <div class="content row mb-0 mb-md-4 d-flex px-3 px-md-5 py-4 fw-light fs-5 fs-xsm-6">
                 <div class="col-md-6">
-                    <img class="align-self-start" src="./images/about-us-pic1.jpg" alt="adopt" style=" width: 100%; height: 60vh; object-fit: cover;">
+                    <img id="img-content" class="align-self-start" src="./images/about-us-pic1.jpg" alt="adopt" style=" width: 100%; height: 60vh; object-fit: cover;">
                 </div>
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="ms-5  mx-auto">
-                        <p class="text-start fs-5" style="text-align: justify !important;">
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                    <div class="mt-3 mt-md-0 ms-2 ms-md-5  mx-auto">
+                        <p class="text-start fs-md-5" style="text-align: justify !important;">
                             <b class="fw-bold">Rescue TAILS: Taking Animals Into Loved & Sheltered</b> was founded with a simple yet powerful goal: to provide loving homes for animals in need and to promote the importance of adoption over purchasing pets. We believe that every animal, regardless of their past, deserves a second chance at life, filled with love, care, and security. Through our efforts, we aim to reduce pet homelessness, raise awareness about responsible pet ownership, and connect compassionate adopters with animals who are eager to find their forever homes. 
                             
                         </p>
@@ -117,59 +177,45 @@
         </div>
 
         <!-- MISSION AND VISION SECTION -->
-        
+  <div class="container">
+        <div class="row ">
+            <div class="col-12 ">
+                
+                <img class="img-divider d-block mx-auto img-fluid" src="images/about-us-pic4.png" alt="dog and cats" >
 
+            </div>
 
-
-        <div class="container">
+        </div>
             <div class="row mb-2">
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="border: 1px solid #6256ca !important;">
                         <div class="col p-4 d-flex flex-column position-static">
                             <h3 class="mb-0 fw-bold" style="color: #f9622a;">OUR MISSION</h3>
-                            <p class="card-text mb-auto">We rescue, rehabilitate, and rehome abandoned, abused, and neglected animals. We strive to create a safe space for them to heal and thrive, offering each animal the love and care they deserve. By promoting adoption, we aim to decrease the number of animals in shelters and reduce the cycle of overpopulation.</p>
+                            <p class="card-text mb-auto" style="text-align: justify !important;">We rescue, rehabilitate, and rehome abandoned, and abused animals. We strive to create a safe space for them to heal and thrive, offering each pet the love and care they deserve. We aim to decrease the number of animals in streets and give them love and shelter.</p>
                         </div>
-                        <div class="col-auto d-none d-lg-block position-relative">
+                        <div class="col-4 col-xl-5 d-none d-lg-block position-relative">
                             <div class="img-overlay" style="background-color: rgba(249, 98, 42, 0.5);"></div> <!-- Overlay color -->
-                            <img src="images/about-us-pic3.jpg" alt="Thumbnail" class="img-mission img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+                            <img src="images/about-us-pic3.jpg" alt="Thumbnail" class="img-mission img-fluid" style="width: 300px; height: 320px; object-fit: cover;overflow: hidden; position: absolute;">
                         </div>
                     </div>
                 </div>
         
                 <div class="col-md-6">
+                    
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="border: 1px solid #6256ca !important;">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0 fw-bold" style="color: #00712d;">OUR VISION</h3>
-                            <p class="card-text mb-auto">A world where every animal has a loving home and where pet homelessness is a thing of the past. Through community engagement, education, and adoption initiatives, we aspire to foster a society that values compassion and care for all animals.</p>
+                            <h3 class="mb-0 fw-bold" style=" color: #00712d;">OUR VISION</h3>
+                            <p class="card-text mb-auto" style="text-align: justify !important;">A world where every animal has a loving home and where pet homelessness is a thing of the past. Through community engagement, education, and adoption initiatives, we aspire to foster a society that values compassion and care for all animals.</p>
                         </div>
-                        <div class="col-auto d-none d-lg-block position-relative">
-                            <div class="img-overlay" style="background-color: rgba(0, 113, 45, 0.5);"></div> <!-- Overlay color -->
-                            <img src="images/about-us-pic2.jpg" alt="Thumbnail" class="img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+                        <div class="col-4 col-xl-5 d-none d-lg-block position-relative">
+                            <div class="img-overlay" style="background-color: rgba(0, 113, 45, 0.5);"></div>
+                            <img src="images/about-us-pic2.jpg" alt="Thumbnail" class="img-fluid" style="width: 300px; height: 300px; object-fit: cover;overflow: hidden; position: absolute;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <style>
-            .position-relative {
-                position: relative;
-            }
-            
-            .img-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 1; /* Place the overlay above the image */
-                border-radius: 0.25rem; /* Match the border radius of the card */
-            }
-        
-            img {
-                z-index: 0; /* Place the image below the overlay */
-            }
-        </style>
+ 
         
 
         <!-- DIVISION -->
@@ -177,57 +223,221 @@
         
         <!-- PURPOSE SECTION -->
 
-        <div class="container-fluid mx-4 mb-5 p-3 d-flex justify-content-center align-items-center">
-            <div class="row mb-4 d-flex px-5 py-4 fw-light fs-5 fs-xsm-6">
-                <div class="col-md-6">
-                    <div class="ms-5 mx-auto">
+        <div class="content-purpose container-fluid mx-1 mx-md-4 mb-1 mb-md-5 p-1 p-md-3 d-flex justify-content-center align-items-center">
+            <div class="row mb-4 d-flex px-2 px-md-5 py-4 fw-light fs-5 fs-xsm-6">
+                <div class="col-12 col-lg-6">
+                    <div class="ms-0 ms-md-5 mx-2 mx-md-auto">
                         <h1 class="fw-bold" style="text-indent: 0; color: #6256ca;">Rescue, Rehome, Rejoice
                             <br></h1>
         
-                        <p class="text-start fs-5" style="text-align: justify !important;">
+                        <p class="text-start fs-md-5" style="text-align: justify !important;">
                             <br>
                             Our purpose is to give animals a second chance at life. Rescue TAILS is a platform dedicated to showcasing the animals in our care, raising awareness about the joys and responsibilities of pet adoption, and making it easy for individuals and families to find their perfect pet. Through Rescue Tails, we not only save animals but also inspire a culture of kindness and responsible pet ownership.
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-center">
-                    <img class="align-self-center ms-5" src="./images/purpose-pic.png" alt="adopt" style="width: 80%; height:auto; object-fit: cover;">
+                <div class="col-12 col-lg-6 d-flex align-items-center">
+                    <img class="img-purpose align-self-center mx-auto mx-lg-1 " src="./images/purpose-pic.png" alt="adopt" style="width: 90%; height:auto; object-fit: cover;">
                 </div>
             </div>
         </div>
         
 
     
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 border-top" style="color: #585a54;">
+            <div class="col-md-4 text-center text-md-start mx-auto mx-md-0">
 
-        <!-- FOOTER -->
-      <footer>
-        <div class="container" >  
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-4 border-top"style="color: #585a54;">
-                <div class="col-md-4">
-                    
-                <ul class=" fa-sm-l list-unstyled d-flex">
+                <ul class="fa-sm-l list-unstyled d-flex justify-content-center justify-content-md-start">
                     <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com" target="_blank"><i class="fa-2xl fa-brands fa-facebook"></i></a></li>
                     <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com" target="_blank"><i class="fa-2xl fa-brands fa-instagram"></i></a></li>
                     <li class="ms-3"><a class="text-body-secondary" href="https://www.twitter.com" target="_blank"><i class="fa-2xl fa-brands fa-x-twitter"></i></a></li>
                     <li class="ms-3"><a class="text-body-secondary" href="https://www.threads.net" target="_blank"><i class="fa-brands fa-threads fa-2xl"></i></a></li>
-                  </ul>
-                  <p ><i class="fa-solid fa-location-pin" style="color: #585a54;"></i> Tanauan City, Batangas Province<br> <i class="fa-solid fa-envelope" style="color: #585a54;"></i> rescueTAILS@gmail.com | +63-949-563-0130</p>
-                </div>
-                
-          
-              <a href="#" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <img class="mb-4"src="images/logo.png" alt="Rescue tails" width="100" height="auto">
-              </a>
-              <div class="col-md-4 mb-0 text-body-secondary justify-content-end text-end" >
-                <a style="text-decoration: none; color: #6256ca;" href="privacy_policy.html">Privacy Policy |</a>
-                <a style="text-decoration: none; color: #6256ca;" href="termsof_service.html">Terms of Service |</a>
-                <a style="text-decoration: none; color: #6256ca;" href="faqs.html">FAQs</a>
+                </ul>
+                <p><i class="fa-solid fa-location-pin" style="color: #585a54;"></i> Tanauan City, Batangas Province<br> <i class="fa-solid fa-envelope" style="color: #585a54;"></i> rescueTAILS@gmail.com | +63-949-563-0130</p>
+            </div>
+
+
+            <a href="#" class="d-none col-md-4 d-md-flex align-items-center justify-content-center mb-3 mb-md-0  link-body-emphasis text-decoration-none">
+                <img class="mb-4" src="images/logo.png" alt="Rescue tails" width="100" height="auto">
+            </a>
+            <div class="col-md-4 mb-0 text-body-secondary mx-auto mx-md-0 text-center text-md-end">
+                <a style="text-decoration: none; color: #6256ca;" href="#" data-bs-toggle="modal" data-bs-target="#PrivacyPolicy">Privacy Policy |</a>
+                <a style="text-decoration: none; color: #6256ca;" href="#" data-bs-toggle="modal" data-bs-target="#TermsService">Terms of Service |</a>
+                <a style="text-decoration: none; color: #6256ca;" href="#" data-bs-toggle="modal" data-bs-target="#FAQs">FAQs</a>
                 <p>© 2024, RescueTAILS. All Rights Reserved. <br>Site by Marissa Margarette Garcia</p>
+
+            </div>
+        </footer>
+    </div>
+</footer>
+
+
+<!-- MODALS FOR FOOTER LINKS -->
+ <!-- MODAL FOR PRIVACY POLICY -->
+<div class="modal-sign modal fade" id="PrivacyPolicy" tabindex="-1" aria-labelledby="PrivacyPolicy" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Privacy Policy</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-auto" style="max-height: 400px;"> 
+                <h6 class="fw-light">At Rescue TAILS, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website. Please read this policy carefully. If you do not agree with the terms of this policy, please do not access the site.</h6>
+                <ol>
+                    <li><b>Information We Collect</b></li>
+                <ul>
+                    <li><i class="fa-solid fa-paw bullet"></i><b> Personal Information:</b> When you create an account, fill out a form, or contact us, we may collect personal information, such as your name, email address, phone number, and any other information you choose to provide.</li>
+                        <li><i class="fa-solid fa-paw bullet"></i><b> Usage Data:</b> We may collect information on how you access and use the website, including your IP address, browser type, pages visited, and the time and date of your visits.</li>
+                </ul>
+                <li><b>How We Use Your Information</b>
+                    <ul>
+                        <li><i class="fa-solid fa-paw bullet"></i> To provide, maintain, and improve our website and services.</li>
+                        <li><i class="fa-solid fa-paw bullet"></i> To monitor usage and analyze trends to improve user experience.</li>
+        
+                    </ul>
+                </li>
+                <li><b>Disclosure of Your Information</b>
+                <ul>
+                    <li><i class="fa-solid fa-paw bullet"></i> We do not sell, trade, or otherwise transfer your personal information to outside parties except to provide services, comply with the law, or protect our rights.</li>
+                </ul></li>
+                <li><b>Security of Your Information</b>
+                <ul><i class="fa-solid fa-paw bullet"></i> 
+                    We implement reasonable security measures to protect your personal information from unauthorized access and use. However, no method of transmission over the Internet or electronic storage is 100% secure.
+                </ul></li>
                 
-            </div> 
-            </footer>
-          </div>
-      </footer>
+            </ol>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR TERMS OF SERVICE -->
+<div class="modal-sign modal fade" id="TermsService" tabindex="-1" aria-labelledby="TermsService" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="termsModalLabel">Terms of Service</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-auto" style="max-height: 400px;"> 
+                <h6 class="fw-light">Welcome to Rescue TAILS. By accessing or using our website, you agree to comply with and be bound by these Terms of Service. If you do not agree with these terms, please do not use our website.</h6>
+                <ol>
+                    <li><b>Account Registration</b>
+                <ul>
+                    <li><i class="fa-solid fa-paw bullet"></i> To access certain features of the website, you may be required to create an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</li>
+                </ul></li>
+                <li><b>User Conduct</b>
+                    <h6 class="fw-light">You agree not to engage in any of the following prohibited activities:</h6>
+                    <ul>
+                        <li><i class="fa-solid fa-paw bullet"></i> Violating any applicable laws or regulations</li>
+                        <li><i class="fa-solid fa-paw bullet"></i> Impersonating any person or entity or misrepresenting your affiliation with any person or entity.</li>
+        
+                    </ul>
+                </li>
+                <li><b>Third-Party Links</b>
+                <ul>
+                    <li><i class="fa-solid fa-paw bullet"></i> Our website may contain links to third-party websites that are not owned or controlled by Rescue Tails. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites.</li>
+                </ul></li>
+                <li><b>Limitation of Liability</b>
+                <ul><i class="fa-solid fa-paw bullet"></i> 
+                    In no event shall Rescue TAILS, its directors, employees, or agents be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or other intangible losses, arising from or related to your use of the website.
+                </ul></li>
+                
+            </ol>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR FAQs -->
+<div class="modal-sign modal fade" id="FAQs" tabindex="-1" aria-labelledby="FAQs" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions (FAQs)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body overflow-auto" style="max-height: 400px;"> 
+                
+                <ol>
+                    <li><b>What is Rescue TAILS?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> Rescue Tails is a dedicated shelter for rescuing animals in need, raising awareness about pet adoption, and connecting individuals and families with their perfect pets. We strive to provide a loving environment for animals awaiting adoption.</li>
+                        </ul>
+                    </li>
+                    <li><b>How can I adopt a pet?</b>
+                        <ul>
+                            <h6 class="fw-light">To adopt a pet, follow these simple steps:</h6>
+                            
+                            <li><i class="fa-solid fa-paw bullet"></i> Visit our shelter to meet the animals.</li>
+                            <li><i class="fa-solid fa-paw bullet"></i> Fill out the adoption application form.</li>
+                            <li><i class="fa-solid fa-paw bullet"></i> Participate in an interview with our staff.</li>
+                            <li><i class="fa-solid fa-paw bullet"></i> Once approved, you can take your new pet home!</li>
+                        </ul>
+                    </li>
+                    <li><b>What are the adoption fees?</b>
+                        <ul>
+                            <h6 class="fw-light">Our adoption fees are as follows:</h6>
+                         
+                            <li><i class="fa-solid fa-paw bullet"></i> Cats: 500 pesos</li>
+                            <li><i class="fa-solid fa-paw bullet"></i> Dogs: 1000 pesos</li>
+                            <li><i class="fa-solid fa-paw bullet"></i> These fees help cover the costs of veterinary care, vaccinations, and other expenses associated with rescuing and caring for our animals.</li>
+                        </ul>
+                    </li>
+                    <li><b>Can I visit the shelter before adopting?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> Absolutely! We encourage potential adopters to visit our shelter to meet our animals and learn more about our adoption process.</li>
+                        </ul>
+                    </li>
+                    <li><b>What should I bring when I visit the shelter?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> When visiting our shelter, please bring a valid ID. If you plan to adopt, consider bringing a leash and collar for dogs or a carrier for cats.</li>
+                        </ul>
+                    </li>
+                    <li><b>Are the pets at Rescue TAILS vaccinated and spayed/neutered?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> Yes! All our animals are up-to-date on vaccinations and are spayed or neutered before adoption to ensure their health and well-being.</li>
+                        </ul>
+                    </li>
+                    <li><b>Can I adopt if I have other pets at home?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> Yes! We encourage families with pets to adopt. We recommend bringing your current pets to meet the new pet to ensure compatibility. Our staff can also provide guidance on how to introduce new pets to your home.</li>
+                        </ul>
+                    </li>
+                    <li><b>What if I can’t keep the pet I adopt?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> We understand that circumstances may change. If you cannot keep your adopted pet, please contact us. We will work with you to find a suitable solution and may take the pet back into our care.</li>
+                        </ul>
+                    </li>
+                    <li><b>How can I help if I can’t adopt?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> There are many ways to support Rescue TAILS! You can volunteer your time, donate supplies or funds, foster animals in need, or help spread the word about our mission and available pets.</li>
+                        </ul>
+                    </li>
+                    <li><b>Where can I find updates on available pets?</b>
+                        <ul>
+                            <li><i class="fa-solid fa-paw bullet"></i> You can find information about our available pets on our website.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="bdonatebtn btnCustom btn btn-dark btn-sm px-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
       <script src="Templates/all.min.js"></script>  
